@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Trivia Salvaje</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://cdn.glitch.global/dd7f20cf-a82f-456c-be93-e62e7360f6d5/font-weight%20600%3B.svg?v=1699373205294"
+        alt="TriviaSalvaje"
+        class="logo"
+      />
+
+      <p id="timer"></p>
+    </header>
+    <main>
+      <!-- Welcome Section -->
+      <section id="welcome" class="welcome card show">
+        <label class="lablebox" for="name">Ingresa tu nombre</label><br />
+        <input class="box" type="text" id="name" name="name" required /><br />
+        <p id="errorWelcome" class="error message hide"></p>
+        <button onclick="buttonWelcome()" class="button show">Enviar</button>
+      </section>
+      <!-- Categories Section -->
+      <section id="categories" class="categories card hide">
+        <p class="message show" id="messageWelcome"></p>
+        <button id="buttonAnimals" onclick="buttonAnimals()" class="button">
+          Animales
+        </button>
+        <button id="buttonPlants" onclick="buttonPlants()" class="button">
+          Plantas
+        </button>
+        <button id="buttonStart" onclick="buttonStart()" class="button hide">
+          Comenzar
+        </button>
+      </section>
+      <!-- Animals Category -->
+      <section id="animals">
+        <!-- Animals Category - Fisrt Question -->
+        <section id="first" class="first card hide">
+          <h2>
+            1. Vuelo de noche, duermo de día y nunca verás plumas, en el ala
+            mía. ¿Quién soy?
+          </h2>
+          <input
+            type="radio"
+            id="answer1.1"
+            name="question1"
+            value="pinguino"
+          />
+          <label for="answer1.1" class="answer">Pingüino</label> <br />
+          <input
+            type="radio"
+            id="answer1.2"
+            name="question1"
+            value="murcielago"
+          />
+          <label for="answer1.2" class="answer">Murciélago</label> <br />
+          <input type="radio" id="answer1.3" name="question1" value="gato" />
+          <label for="answer1.3" class="answer">Gato</label> <br />
+          <p id="unchecked1" class="message hide"></p>
+          <section class="buttonSection">
+            <button
+              onclick="buttonQuestion('question1', 1, 'rightAnswer1', 'Murciélago', 'buttonQuestion1', 'buttonNext1', 'unchecked1')"
+              class="button"
+              id="buttonQuestion1"
+            >
+              Enviar
+            </button>
+            <p class="message" id="rightAnswer1"></p>
+            <button
+              id="buttonNext1"
+              onclick="buttonNext('first', 'second', 'second card show')"
+              class="button hide"
+            >
+              Siguiente
+            </button>
+          </section>
+        </section>
+        <!-- Animals Category - Second Question -->
+        <section id="second" class="second card hide">
+          <h2>
+            2. Canto en la orilla, vivo en el agua, no soy pescado ni soy
+            cigarra. ¿Quién soy?
+          </h2>
+
+          <input type="radio" id="answer2.1" name="question2" value="perro" />
+          <label for="answer2.1"> Perro </label> <br />
+          <input type="radio" id="answer2.2" name="question2" value="gallina" />
+          <label for="answer2.2">Gallina</label> <br />
+          <input type="radio" id="answer2.3" name="question2" value="rana" />
+          <label for="answer2.3">Rana</label> <br />
+          <p id="unchecked2" class="message hide"></p>
+          <section class="buttonSection">
+            <button
+              onclick="buttonQuestion('question2', 2, 'rightAnswer2', 'Rana', 'buttonQuestion2', 'buttonNext2', 'unchecked2')"
+              class="button"
+              id="buttonQuestion2"
+            >
+              Enviar
+            </button>
+            <p class="message" id="rightAnswer2"></p>
+            <br />
+            <button
+              id="buttonNext2"
+              onclick="buttonNext('second', 'third', 'third card show')"
+              class="button hide"
+            >
+              Siguiente
+            </button>
+          </section>
+        </section>
+        <!-- Animals Category - Third Question -->
+        <section id="third" class="third card hide">
+          <h2>
+            3. Tengo grandes orejas y trompa, me gusta comer hojas y bañar mi
+            dura piel. ¿Quién soy?
+          </h2>
+          <input
+            type="radio"
+            id="answer3.1"
+            name="question3"
+            value="elefante"
+          />
+          <label for="answer3.1">Elefante</label> <br />
+          <input
+            type="radio"
+            id="answer3.2"
+            name="question3"
+            value="hipopotamo"
+          />
+          <label for="answer3.2">Hipopótamo</label> <br />
+          <input type="radio" id="answer3.3" name="question3" value="jirafa" />
+          <label for="answer3.3">Jirafa</label> <br />
+          <p id="unchecked3" class="message hide"></p>
+          <section class="buttonSection">
+            <button
+              onclick="buttonQuestion('question3', 0, 'rightAnswer3', 'Elefante', 'buttonQuestion3', 'buttonNext3', 'unchecked3')"
+              class="button"
+              id="buttonQuestion3"
+            >
+              Finalizar
+            </button>
+
+            <p class="message" id="rightAnswer3"></p>
+            <button
+              id="buttonNext3"
+              onclick="buttonNext('third', 'endAnimals', 'end animals card show')"
+              class="button hide"
+            >
+              Ver puntaje
+            </button>
+          </section>
+        </section>
+        <!-- Animals Category - Score Section -->
+        <section id="endAnimals" class="end animals card hide">
+          <p class="message" id="finalScoreAnimals"></p>
+          <button
+            id="buttonRestartAnimals"
+            onclick="buttonRestartAnimals()"
+            class="button hide"
+          >
+            Reiniciar
+          </button>
+        </section>
+      </section>
+      <!-- Plants Category -->
+      <section id="plants">
+        <!-- Plants Category - First Question -->
+        <section id="firstPlant" class="first plant card hide">
+          <img
+            src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/5.svg?v=1699461598226"
+            id="silhouette1"
+            class="show"
+            alt="silueta1"
+          />
+          <img
+            src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/6.svg?v=1699461604401"
+            id="plantImage1"
+            class="hide"
+            alt="Tulipan"
+          />
+          <h2>1. ¿Qué planta es?</h2>
+          <input
+            type="radio"
+            id="plantAnswer1.1"
+            name="plantQuestion1"
+            value="tulipan"
+          />
+          <label for="plantAnswer1.1">Tulipan</label> <br />
+          <input
+            type="radio"
+            id="plantAnswer1.2"
+            name="plantQuestion1"
+            value="gardenia"
+          />
+          <label for="plantAnswer1.2">Gardenia</label> <br />
+          <input
+            type="radio"
+            id="plantAnswer1.3"
+            name="plantQuestion1"
+            value="rosa"
+          />
+          <label for="plantAnswer1.3">Rosa</label> <br />
+          <p id="uncheckedPlant1" class="message hide"></p>
+          <section class="buttonSection">
+            <button
+              onclick="buttonQuestion('plantQuestion1', 0, 'rightPlantAnswer1', 'Tulipán', 'buttonPlantQuestion1', 'buttonNextPlant1', 'uncheckedPlant1', 'silhouette1', 'plantImage1')"
+              class="button"
+              id="buttonPlantQuestion1"
+            >
+              Enviar
+            </button>
+
+            <p class="message" id="rightPlantAnswer1"></p>
+            <button
+              id="buttonNextPlant1"
+              onclick="buttonNext('firstPlant', 'secondPlant', 'second plant card show')"
+              class="button hide"
+            >
+              Siguiente
+            </button>
+          </section>
+        </section>
+        <!-- Plants Category - Second Question -->
+        <section id="secondPlant" class="second plant card hide">
+          <img
+            src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/7.svg?v=1699461609765"
+            id="silhouette2"
+            class="show"
+            alt="silueta2"
+          />
+          <img
+            src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/8.svg?v=1699461616267"
+            id="plantImage2"
+            class="hide"
+            alt="Cactus"
+          />
+          <h2>2. ¿Qué planta es?</h2>
+          <input
+            type="radio"
+            id="plantAnswer2.1"
+            name="plantQuestion2"
+            value="suculenta"
+          />
+          <label for="plantAnswer2.1">Suculenta</label> <br />
+          <input
+            type="radio"
+            id="plantAnswer2.2"
+            name="plantQuestion2"
+            value="agave"
+          />
+          <label for="plantAnswer2.2">Agave</label> <br />
+          <input
+            type="radio"
+            id="plantAnswer2.3"
+            name="plantQuestion2"
+            value="cactus"
+          />
+          <label for="plantAnswer2.3">Cactus</label> <br />
+          <p id="uncheckedPlant2" class="message hide"></p>
+          <section class="buttonSection">
+            <button
+              onclick="buttonQuestion('plantQuestion2', 2, 'rightPlantAnswer2', 'Cactus', 'buttonPlantQuestion2', 'buttonNextPlant2', 'uncheckedPlant2', 'silhouette2', 'plantImage2')"
+              class="button"
+              id="buttonPlantQuestion2"
+            >
+              Enviar
+            </button>
+
+            <p class="message" id="rightPlantAnswer2"></p>
+            <button
+              id="buttonNextPlant2"
+              onclick="buttonNext('secondPlant', 'thirdPlant', 'third plant card show')"
+              class="button hide"
+            >
+              Siguiente
+            </button>
+          </section>
+        </section>
+        <!-- Plants Category - Third Question -->
+        <section id="thirdPlant" class="third plant card hide">
+          <img
+            src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/9.svg?v=1699461625433"
+            id="silhouette3"
+            class="show"
+            alt="silueta3"
+          />
+          <img
+            src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/10.svg?v=1699461591356"
+            id="plantImage3"
+            class="hide"
+            alt="Lavanda"
+          />
+          <h2>3. ¿Qué planta es?</h2>
+          <input
+            type="radio"
+            id="plantAnswer3.1"
+            name="plantQuestion3"
+            value="menta"
+          />
+          <label for="plantAnswer3.1">Menta</label> <br />
+          <input
+            type="radio"
+            id="plantAnswer3.2"
+            name="plantQuestion3"
+            value="lavanda"
+          />
+          <label for="plantAnswer3.2">Lavanda</label> <br />
+          <input
+            type="radio"
+            id="plantAnswer3.3"
+            name="plantQuestion3"
+            value="manzanilla"
+          />
+          <label for="plantAnswer3.3">Manzanilla</label> <br />
+          <p id="uncheckedPlant3" class="message hide"></p>
+          <section class="buttonSection">
+            <button
+              onclick="buttonQuestion('plantQuestion3', 1, 'rightPlantAnswer3', 'Lavanda', 'buttonPlantQuestion3', 'buttonNextPlant3', 'uncheckedPlant3', 'silhouette3', 'plantImage3')"
+              class="button"
+              id="buttonPlantQuestion3"
+            >
+              Finalizar
+            </button>
+            <p class="message" id="rightPlantAnswer3"></p>
+            <button
+              id="buttonNextPlant3"
+              onclick="buttonNext('thirdPlant', 'endPlants', 'end plants card show')"
+              class="button hide"
+            >
+              Ver puntaje
+            </button>
+          </section>
+        </section>
+        <!-- Plants Category - Score Section -->
+        <section id="endPlants" class="end plants card hide">
+          <p class="message" id="finalScorePlants"></p>
+          <button
+            id="buttonRestartPlants"
+            onclick="buttonRestartPlants()"
+            class="button hide"
+          >
+            Reiniciar
+          </button>
+        </section>
+      </section>
+      <!-- Final -->
+    </main>
+    <script src="/script.js" defer></script>
+  </body>
+</html>

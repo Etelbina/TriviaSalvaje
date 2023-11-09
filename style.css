@@ -1,0 +1,329 @@
+/* General Styles */
+html,
+body {
+  width: 100%;
+  color: white;
+  background-color: #000000;
+}
+
+main {
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  height: 150px;
+  margin-left: 15%;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+/* Sections general styles */
+
+section.card {
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px 30px;
+  width: 220px;
+  height: 500px;
+  margin: 25px auto;
+}
+
+section.welcome {
+  border: 2px #f38c01 solid;
+  box-shadow: 0 0 15px 5px #f38c01;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.categories {
+  border: 2px #f5db24 solid;
+  box-shadow: 0 0 15px 5px #f5db24;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer {
+  color: #e40025;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 30px #e40025;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  margin: 3px;
+}
+
+/* Radio styles */
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #ffffff;
+  margin: 20px 10px 0 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+label.answer:hover {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+input[type="radio"]:hover {
+  background-color: #ffffff;
+  width: 18px;
+  height: 18px;
+}
+
+input[type="radio"]:checked {
+  box-shadow: 3px 3px 10px #2ea8fb;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+input[type="radio"]:checked + label {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+section.first label.answer:hover {
+  text-shadow: 3px 3px 10px #2ea8fb;
+}
+
+section.first input[type="radio"]:hover {
+  box-shadow: 3px 3px 10px #2ea8fb;
+}
+
+section.first input[type="radio"]:checked {
+  background-color: #2ea8fb;
+  text-shadow: 3px 3px 10px #2ea8fb;
+}
+
+section.first input[type="radio"]:checked + label {
+  color: #2ea8fb;
+  text-shadow: 3px 3px 10px #2ea8fb;
+}
+
+section.second label.answer:hover {
+  text-shadow: 3px 3px 10px #853eb8;
+}
+
+section.second input[type="radio"]:hover {
+  box-shadow: 3px 3px 10px #853eb8;
+}
+
+section.second input[type="radio"]:checked {
+  background-color: #853eb8;
+  text-shadow: 3px 3px 10px #853eb8;
+}
+
+section.second input[type="radio"]:checked + label {
+  color: #853eb8;
+  text-shadow: 3px 3px 10px #853eb8;
+}
+
+section.third label.answer:hover {
+  text-shadow: 3px 3px 10px #dc02cd;
+}
+
+section.third input[type="radio"]:hover {
+  box-shadow: 3px 3px 10px #dc02cd;
+}
+
+section.third input[type="radio"]:checked {
+  background-color: #dc02cd;
+  text-shadow: 3px 3px 10px #dc02cd;
+}
+
+section.third input[type="radio"]:checked + label {
+  color: #dc02cd;
+  text-shadow: 3px 3px 10px #dc02cd;
+}
+
+/* Section neon style */
+
+section.first {
+  border: 2px #2ea8fb solid;
+  box-shadow: 0 0 15px 5px #2ea8fb;
+}
+
+section.second {
+  border: 2px #853eb8 solid;
+  box-shadow: 0 0 15px 5px #853eb8;
+}
+
+section.third {
+  border: 2px #dc02cd solid;
+  box-shadow: 0 0 15px 5px #dc02cd;
+}
+
+section.end {
+  text-align: center;
+  border: 2px #9cd910 solid;
+  box-shadow: 0 0 15px 5px #9cd910;
+}
+
+/*  Text box */
+
+.lablebox {
+  margin-top: 50px;
+  display: inline-block;
+}
+
+.box {
+  margin-top: 72px;
+  width: 220px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: #f38c01;
+  text-transform: uppercase;
+}
+
+/* Buttons general styles */
+
+.button {
+  font-family: "Rubik", sans-serif;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  border-style: none;
+  border-radius: 5px;
+  height: 32px;
+  width: 105px;
+  border: 1px #ffffff solid;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  font-size: 18px;
+  height: 38px;
+  width: 120px;
+}
+
+/* Buttons sections styles */
+
+section.welcome button {
+  color: #ffffff;
+  background-color: #f38c01;
+  box-shadow: 0 0 7px 3px #f38c01;
+}
+
+section.categories button {
+  color: #000000;
+  background-color: #f5db24;
+  box-shadow: 0 0 7px 3px #f5db24;
+}
+
+section.first button {
+  color: #ffffff;
+  background-color: #2ea8fb;
+  box-shadow: 0 0 7px 3px #2ea8fb;
+}
+
+section.second button {
+  color: #ffffff;
+  background-color: #853eb8;
+  box-shadow: 0 0 7px 3px #853eb8;
+}
+
+section.third button {
+  color: #ffffff;
+  background-color: #dc02cd;
+  box-shadow: 0 0 7px 3px #dc02cd;
+}
+
+section.end button {
+  color: #ffffff;
+  background-color: #9cd910;
+  box-shadow: 0 0 7px 3px #9cd910;
+}
+
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Specific styles for next button */
+
+#buttonNext3,
+#buttonNextPlant3 {
+  font-size: 20px;
+  height: 40px;
+  width: 180px;
+}
+
+#buttonNext3:hover,
+#buttonNextPlant3:hover {
+  font-size: 25px;
+  height: 48px;
+  width: 220px;
+}
+
+/* Texts that appear with show class */
+
+p.message {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p.error {
+  font-size: 15px;
+  color: #e40025;
+  text-shadow: 3px 3px 10px #e40025;
+}
+
+section.first p.message {
+  color: #2ea8fb;
+  text-shadow: 1px 1px 30px #2ea8fb;
+}
+
+section.second p.message {
+  color: #853eb8;
+  text-shadow: 5px 5px 10px #853eb8;
+}
+
+section.third p.message {
+  color: #dc02cd;
+  text-shadow: 1px 1px 30px #dc02cd;
+}
+
+section.end p.message {
+  color: #9cd910;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 30px #9cd910;
+}
+
+/* Hide class */
+
+.hide {
+  display: none;
+}
