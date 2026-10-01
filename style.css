@@ -1,329 +1,330 @@
+/* Hito 1: CSS is not used. Original rules are kept commented for later milestones. */
 /* General Styles */
-html,
-body {
-  width: 100%;
-  color: white;
-  background-color: #000000;
-}
+/* Hito 1 disabled: html, */
+/* Hito 1 disabled: body { */
+/* Hito 1 disabled:   width: 100%; */
+/* Hito 1 disabled:   color: white; */
+/* Hito 1 disabled:   background-color: #000000; */
+/* Hito 1 disabled: } */
 
-main {
-  font-family: "Rubik", sans-serif;
-}
+/* Hito 1 disabled: main { */
+/* Hito 1 disabled:   font-family: "Rubik", sans-serif; */
+/* Hito 1 disabled: } */
 
-header {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+/* Hito 1 disabled: header { */
+/* Hito 1 disabled:   margin-top: 40px; */
+/* Hito 1 disabled:   width: 100%; */
+/* Hito 1 disabled:   display: flex; */
+/* Hito 1 disabled:   justify-content: center; */
+/* Hito 1 disabled:   flex-direction: column; */
+/* Hito 1 disabled: } */
 
-img {
-  height: 150px;
-  margin-left: 15%;
-}
+/* Hito 1 disabled: img { */
+/* Hito 1 disabled:   height: 150px; */
+/* Hito 1 disabled:   margin-left: 15%; */
+/* Hito 1 disabled: } */
 
-.logo {
-  margin: 0 auto;
-}
+/* Hito 1 disabled: .logo { */
+/* Hito 1 disabled:   margin: 0 auto; */
+/* Hito 1 disabled: } */
 
-h2 {
-  color: #ffffff;
-}
+/* Hito 1 disabled: h2 { */
+/* Hito 1 disabled:   color: #ffffff; */
+/* Hito 1 disabled: } */
 
 /* Sections general styles */
 
-section.card {
-  border-radius: 10px;
-  padding: 40px;
-  margin: 20px 30px;
-  width: 220px;
-  height: 500px;
-  margin: 25px auto;
-}
+/* Hito 1 disabled: section.card { */
+/* Hito 1 disabled:   border-radius: 10px; */
+/* Hito 1 disabled:   padding: 40px; */
+/* Hito 1 disabled:   margin: 20px 30px; */
+/* Hito 1 disabled:   width: 220px; */
+/* Hito 1 disabled:   height: 500px; */
+/* Hito 1 disabled:   margin: 25px auto; */
+/* Hito 1 disabled: } */
 
-section.welcome {
-  border: 2px #f38c01 solid;
-  box-shadow: 0 0 15px 5px #f38c01;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-}
+/* Hito 1 disabled: section.welcome { */
+/* Hito 1 disabled:   border: 2px #f38c01 solid; */
+/* Hito 1 disabled:   box-shadow: 0 0 15px 5px #f38c01; */
+/* Hito 1 disabled:   text-align: center; */
+/* Hito 1 disabled:   font-size: 40px; */
+/* Hito 1 disabled:   font-weight: 600; */
+/* Hito 1 disabled: } */
 
-.categories {
-  border: 2px #f5db24 solid;
-  box-shadow: 0 0 15px 5px #f5db24;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* Hito 1 disabled: .categories { */
+/* Hito 1 disabled:   border: 2px #f5db24 solid; */
+/* Hito 1 disabled:   box-shadow: 0 0 15px 5px #f5db24; */
+/* Hito 1 disabled:   text-align: center; */
+/* Hito 1 disabled:   font-size: 40px; */
+/* Hito 1 disabled:   font-weight: 600; */
+/* Hito 1 disabled:   display: flex; */
+/* Hito 1 disabled:   flex-direction: column; */
+/* Hito 1 disabled:   justify-content: center; */
+/* Hito 1 disabled:   align-items: center; */
+/* Hito 1 disabled: } */
 
-#timer {
-  color: #e40025;
-  font-size: 20px;
-  font-weight: bold;
-  text-shadow: 1px 1px 30px #e40025;
-  text-align: center;
-  font-family: "Rubik", sans-serif;
-  margin: 3px;
-}
+/* Hito 1 disabled: #timer { */
+/* Hito 1 disabled:   color: #e40025; */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   font-weight: bold; */
+/* Hito 1 disabled:   text-shadow: 1px 1px 30px #e40025; */
+/* Hito 1 disabled:   text-align: center; */
+/* Hito 1 disabled:   font-family: "Rubik", sans-serif; */
+/* Hito 1 disabled:   margin: 3px; */
+/* Hito 1 disabled: } */
 
 /* Radio styles */
 
-input[type="radio"] {
-  appearance: none;
-  background-color: #ffffff;
-  margin: 20px 10px 0 0;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-}
+/* Hito 1 disabled: input[type="radio"] { */
+/* Hito 1 disabled:   appearance: none; */
+/* Hito 1 disabled:   background-color: #ffffff; */
+/* Hito 1 disabled:   margin: 20px 10px 0 0; */
+/* Hito 1 disabled:   width: 12px; */
+/* Hito 1 disabled:   height: 12px; */
+/* Hito 1 disabled:   border: 1px solid #ffffff; */
+/* Hito 1 disabled:   border-radius: 50%; */
+/* Hito 1 disabled: } */
 
-label.answer:hover {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 8px;
-}
+/* Hito 1 disabled: label.answer:hover { */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   font-weight: 600; */
+/* Hito 1 disabled:   padding: 8px; */
+/* Hito 1 disabled: } */
 
-input[type="radio"]:hover {
-  background-color: #ffffff;
-  width: 18px;
-  height: 18px;
-}
+/* Hito 1 disabled: input[type="radio"]:hover { */
+/* Hito 1 disabled:   background-color: #ffffff; */
+/* Hito 1 disabled:   width: 18px; */
+/* Hito 1 disabled:   height: 18px; */
+/* Hito 1 disabled: } */
 
-input[type="radio"]:checked {
-  box-shadow: 3px 3px 10px #2ea8fb;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 8px;
-}
+/* Hito 1 disabled: input[type="radio"]:checked { */
+/* Hito 1 disabled:   box-shadow: 3px 3px 10px #2ea8fb; */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   font-weight: 600; */
+/* Hito 1 disabled:   padding: 8px; */
+/* Hito 1 disabled: } */
 
-input[type="radio"]:checked + label {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 8px;
-}
+/* Hito 1 disabled: input[type="radio"]:checked + label { */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   font-weight: 600; */
+/* Hito 1 disabled:   padding: 8px; */
+/* Hito 1 disabled: } */
 
-section.first label.answer:hover {
-  text-shadow: 3px 3px 10px #2ea8fb;
-}
+/* Hito 1 disabled: section.first label.answer:hover { */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.first input[type="radio"]:hover {
-  box-shadow: 3px 3px 10px #2ea8fb;
-}
+/* Hito 1 disabled: section.first input[type="radio"]:hover { */
+/* Hito 1 disabled:   box-shadow: 3px 3px 10px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.first input[type="radio"]:checked {
-  background-color: #2ea8fb;
-  text-shadow: 3px 3px 10px #2ea8fb;
-}
+/* Hito 1 disabled: section.first input[type="radio"]:checked { */
+/* Hito 1 disabled:   background-color: #2ea8fb; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.first input[type="radio"]:checked + label {
-  color: #2ea8fb;
-  text-shadow: 3px 3px 10px #2ea8fb;
-}
+/* Hito 1 disabled: section.first input[type="radio"]:checked + label { */
+/* Hito 1 disabled:   color: #2ea8fb; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.second label.answer:hover {
-  text-shadow: 3px 3px 10px #853eb8;
-}
+/* Hito 1 disabled: section.second label.answer:hover { */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.second input[type="radio"]:hover {
-  box-shadow: 3px 3px 10px #853eb8;
-}
+/* Hito 1 disabled: section.second input[type="radio"]:hover { */
+/* Hito 1 disabled:   box-shadow: 3px 3px 10px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.second input[type="radio"]:checked {
-  background-color: #853eb8;
-  text-shadow: 3px 3px 10px #853eb8;
-}
+/* Hito 1 disabled: section.second input[type="radio"]:checked { */
+/* Hito 1 disabled:   background-color: #853eb8; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.second input[type="radio"]:checked + label {
-  color: #853eb8;
-  text-shadow: 3px 3px 10px #853eb8;
-}
+/* Hito 1 disabled: section.second input[type="radio"]:checked + label { */
+/* Hito 1 disabled:   color: #853eb8; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.third label.answer:hover {
-  text-shadow: 3px 3px 10px #dc02cd;
-}
+/* Hito 1 disabled: section.third label.answer:hover { */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #dc02cd; */
+/* Hito 1 disabled: } */
 
-section.third input[type="radio"]:hover {
-  box-shadow: 3px 3px 10px #dc02cd;
-}
+/* Hito 1 disabled: section.third input[type="radio"]:hover { */
+/* Hito 1 disabled:   box-shadow: 3px 3px 10px #dc02cd; */
+/* Hito 1 disabled: } */
 
-section.third input[type="radio"]:checked {
-  background-color: #dc02cd;
-  text-shadow: 3px 3px 10px #dc02cd;
-}
+/* Hito 1 disabled: section.third input[type="radio"]:checked { */
+/* Hito 1 disabled:   background-color: #dc02cd; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #dc02cd; */
+/* Hito 1 disabled: } */
 
-section.third input[type="radio"]:checked + label {
-  color: #dc02cd;
-  text-shadow: 3px 3px 10px #dc02cd;
-}
+/* Hito 1 disabled: section.third input[type="radio"]:checked + label { */
+/* Hito 1 disabled:   color: #dc02cd; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #dc02cd; */
+/* Hito 1 disabled: } */
 
 /* Section neon style */
 
-section.first {
-  border: 2px #2ea8fb solid;
-  box-shadow: 0 0 15px 5px #2ea8fb;
-}
+/* Hito 1 disabled: section.first { */
+/* Hito 1 disabled:   border: 2px #2ea8fb solid; */
+/* Hito 1 disabled:   box-shadow: 0 0 15px 5px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.second {
-  border: 2px #853eb8 solid;
-  box-shadow: 0 0 15px 5px #853eb8;
-}
+/* Hito 1 disabled: section.second { */
+/* Hito 1 disabled:   border: 2px #853eb8 solid; */
+/* Hito 1 disabled:   box-shadow: 0 0 15px 5px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.third {
-  border: 2px #dc02cd solid;
-  box-shadow: 0 0 15px 5px #dc02cd;
-}
+/* Hito 1 disabled: section.third { */
+/* Hito 1 disabled:   border: 2px #dc02cd solid; */
+/* Hito 1 disabled:   box-shadow: 0 0 15px 5px #dc02cd; */
+/* Hito 1 disabled: } */
 
-section.end {
-  text-align: center;
-  border: 2px #9cd910 solid;
-  box-shadow: 0 0 15px 5px #9cd910;
-}
+/* Hito 1 disabled: section.end { */
+/* Hito 1 disabled:   text-align: center; */
+/* Hito 1 disabled:   border: 2px #9cd910 solid; */
+/* Hito 1 disabled:   box-shadow: 0 0 15px 5px #9cd910; */
+/* Hito 1 disabled: } */
 
 /*  Text box */
 
-.lablebox {
-  margin-top: 50px;
-  display: inline-block;
-}
+/* Hito 1 disabled: .lablebox { */
+/* Hito 1 disabled:   margin-top: 50px; */
+/* Hito 1 disabled:   display: inline-block; */
+/* Hito 1 disabled: } */
 
-.box {
-  margin-top: 72px;
-  width: 220px;
-  height: 35px;
-  border-radius: 5px;
-  font-family: "Rubik", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  color: #f38c01;
-  text-transform: uppercase;
-}
+/* Hito 1 disabled: .box { */
+/* Hito 1 disabled:   margin-top: 72px; */
+/* Hito 1 disabled:   width: 220px; */
+/* Hito 1 disabled:   height: 35px; */
+/* Hito 1 disabled:   border-radius: 5px; */
+/* Hito 1 disabled:   font-family: "Rubik", sans-serif; */
+/* Hito 1 disabled:   font-weight: bold; */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   text-align: center; */
+/* Hito 1 disabled:   color: #f38c01; */
+/* Hito 1 disabled:   text-transform: uppercase; */
+/* Hito 1 disabled: } */
 
 /* Buttons general styles */
 
-.button {
-  font-family: "Rubik", sans-serif;
-  margin-top: 30px;
-  font-weight: bold;
-  font-size: 15px;
-  border-style: none;
-  border-radius: 5px;
-  height: 32px;
-  width: 105px;
-  border: 1px #ffffff solid;
-  text-transform: uppercase;
-}
+/* Hito 1 disabled: .button { */
+/* Hito 1 disabled:   font-family: "Rubik", sans-serif; */
+/* Hito 1 disabled:   margin-top: 30px; */
+/* Hito 1 disabled:   font-weight: bold; */
+/* Hito 1 disabled:   font-size: 15px; */
+/* Hito 1 disabled:   border-style: none; */
+/* Hito 1 disabled:   border-radius: 5px; */
+/* Hito 1 disabled:   height: 32px; */
+/* Hito 1 disabled:   width: 105px; */
+/* Hito 1 disabled:   border: 1px #ffffff solid; */
+/* Hito 1 disabled:   text-transform: uppercase; */
+/* Hito 1 disabled: } */
 
-.button:hover {
-  font-size: 18px;
-  height: 38px;
-  width: 120px;
-}
+/* Hito 1 disabled: .button:hover { */
+/* Hito 1 disabled:   font-size: 18px; */
+/* Hito 1 disabled:   height: 38px; */
+/* Hito 1 disabled:   width: 120px; */
+/* Hito 1 disabled: } */
 
 /* Buttons sections styles */
 
-section.welcome button {
-  color: #ffffff;
-  background-color: #f38c01;
-  box-shadow: 0 0 7px 3px #f38c01;
-}
+/* Hito 1 disabled: section.welcome button { */
+/* Hito 1 disabled:   color: #ffffff; */
+/* Hito 1 disabled:   background-color: #f38c01; */
+/* Hito 1 disabled:   box-shadow: 0 0 7px 3px #f38c01; */
+/* Hito 1 disabled: } */
 
-section.categories button {
-  color: #000000;
-  background-color: #f5db24;
-  box-shadow: 0 0 7px 3px #f5db24;
-}
+/* Hito 1 disabled: section.categories button { */
+/* Hito 1 disabled:   color: #000000; */
+/* Hito 1 disabled:   background-color: #f5db24; */
+/* Hito 1 disabled:   box-shadow: 0 0 7px 3px #f5db24; */
+/* Hito 1 disabled: } */
 
-section.first button {
-  color: #ffffff;
-  background-color: #2ea8fb;
-  box-shadow: 0 0 7px 3px #2ea8fb;
-}
+/* Hito 1 disabled: section.first button { */
+/* Hito 1 disabled:   color: #ffffff; */
+/* Hito 1 disabled:   background-color: #2ea8fb; */
+/* Hito 1 disabled:   box-shadow: 0 0 7px 3px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.second button {
-  color: #ffffff;
-  background-color: #853eb8;
-  box-shadow: 0 0 7px 3px #853eb8;
-}
+/* Hito 1 disabled: section.second button { */
+/* Hito 1 disabled:   color: #ffffff; */
+/* Hito 1 disabled:   background-color: #853eb8; */
+/* Hito 1 disabled:   box-shadow: 0 0 7px 3px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.third button {
-  color: #ffffff;
-  background-color: #dc02cd;
-  box-shadow: 0 0 7px 3px #dc02cd;
-}
+/* Hito 1 disabled: section.third button { */
+/* Hito 1 disabled:   color: #ffffff; */
+/* Hito 1 disabled:   background-color: #dc02cd; */
+/* Hito 1 disabled:   box-shadow: 0 0 7px 3px #dc02cd; */
+/* Hito 1 disabled: } */
 
-section.end button {
-  color: #ffffff;
-  background-color: #9cd910;
-  box-shadow: 0 0 7px 3px #9cd910;
-}
+/* Hito 1 disabled: section.end button { */
+/* Hito 1 disabled:   color: #ffffff; */
+/* Hito 1 disabled:   background-color: #9cd910; */
+/* Hito 1 disabled:   box-shadow: 0 0 7px 3px #9cd910; */
+/* Hito 1 disabled: } */
 
-.buttonSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Hito 1 disabled: .buttonSection { */
+/* Hito 1 disabled:   display: flex; */
+/* Hito 1 disabled:   flex-direction: column; */
+/* Hito 1 disabled:   align-items: center; */
+/* Hito 1 disabled: } */
 
 /* Specific styles for next button */
 
-#buttonNext3,
-#buttonNextPlant3 {
-  font-size: 20px;
-  height: 40px;
-  width: 180px;
-}
+/* Hito 1 disabled: #buttonNext3, */
+/* Hito 1 disabled: #buttonNextPlant3 { */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   height: 40px; */
+/* Hito 1 disabled:   width: 180px; */
+/* Hito 1 disabled: } */
 
-#buttonNext3:hover,
-#buttonNextPlant3:hover {
-  font-size: 25px;
-  height: 48px;
-  width: 220px;
-}
+/* Hito 1 disabled: #buttonNext3:hover, */
+/* Hito 1 disabled: #buttonNextPlant3:hover { */
+/* Hito 1 disabled:   font-size: 25px; */
+/* Hito 1 disabled:   height: 48px; */
+/* Hito 1 disabled:   width: 220px; */
+/* Hito 1 disabled: } */
 
 /* Texts that appear with show class */
 
-p.message {
-  font-size: 20px;
-  font-weight: bold;
-}
+/* Hito 1 disabled: p.message { */
+/* Hito 1 disabled:   font-size: 20px; */
+/* Hito 1 disabled:   font-weight: bold; */
+/* Hito 1 disabled: } */
 
-p.error {
-  font-size: 15px;
-  color: #e40025;
-  text-shadow: 3px 3px 10px #e40025;
-}
+/* Hito 1 disabled: p.error { */
+/* Hito 1 disabled:   font-size: 15px; */
+/* Hito 1 disabled:   color: #e40025; */
+/* Hito 1 disabled:   text-shadow: 3px 3px 10px #e40025; */
+/* Hito 1 disabled: } */
 
-section.first p.message {
-  color: #2ea8fb;
-  text-shadow: 1px 1px 30px #2ea8fb;
-}
+/* Hito 1 disabled: section.first p.message { */
+/* Hito 1 disabled:   color: #2ea8fb; */
+/* Hito 1 disabled:   text-shadow: 1px 1px 30px #2ea8fb; */
+/* Hito 1 disabled: } */
 
-section.second p.message {
-  color: #853eb8;
-  text-shadow: 5px 5px 10px #853eb8;
-}
+/* Hito 1 disabled: section.second p.message { */
+/* Hito 1 disabled:   color: #853eb8; */
+/* Hito 1 disabled:   text-shadow: 5px 5px 10px #853eb8; */
+/* Hito 1 disabled: } */
 
-section.third p.message {
-  color: #dc02cd;
-  text-shadow: 1px 1px 30px #dc02cd;
-}
+/* Hito 1 disabled: section.third p.message { */
+/* Hito 1 disabled:   color: #dc02cd; */
+/* Hito 1 disabled:   text-shadow: 1px 1px 30px #dc02cd; */
+/* Hito 1 disabled: } */
 
-section.end p.message {
-  color: #9cd910;
-  font-size: 40px;
-  font-weight: bold;
-  text-shadow: 1px 1px 30px #9cd910;
-}
+/* Hito 1 disabled: section.end p.message { */
+/* Hito 1 disabled:   color: #9cd910; */
+/* Hito 1 disabled:   font-size: 40px; */
+/* Hito 1 disabled:   font-weight: bold; */
+/* Hito 1 disabled:   text-shadow: 1px 1px 30px #9cd910; */
+/* Hito 1 disabled: } */
 
 /* Hide class */
 
-.hide {
-  display: none;
-}
+/* Hito 1 disabled: .hide { */
+/* Hito 1 disabled:   display: none; */
+/* Hito 1 disabled: } */

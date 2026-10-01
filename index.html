@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trivia Salvaje: un proyecto creado en dupla durante el proceso de preadmisión de Laboratoria y revisitado individualmente para el portafolio, aprendiendo con IA."
+    />
+    <meta name="author" content="Etelbina Cañedo, Valeria Diaz" />
+    <!-- Hito 1: no CSS or custom font is loaded yet.
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
       rel="stylesheet"
     />
+    -->
     <title>Trivia Salvaje</title>
+    <!-- Hito 1: styling is intentionally not loaded.
     <link rel="stylesheet" href="style.css" />
+    -->
   </head>
   <body>
     <header>
       <img
         src="https://cdn.glitch.global/dd7f20cf-a82f-456c-be93-e62e7360f6d5/font-weight%20600%3B.svg?v=1699373205294"
-        alt="TriviaSalvaje"
+        alt="Trivia Salvaje"
         class="logo"
       />
 
+      <!-- Hito 4: timer is not part of Hito 1.
       <p id="timer"></p>
+      -->
     </header>
     <main>
-      <!-- Welcome Section -->
+      <!-- Hito 2: welcome screen. Kept for a later milestone.
+      
       <section id="welcome" class="welcome card show">
         <label class="lablebox" for="name">Ingresa tu nombre</label><br />
         <input class="box" type="text" id="name" name="name" required /><br />
         <p id="errorWelcome" class="error message hide"></p>
         <button onclick="buttonWelcome()" class="button show">Enviar</button>
       </section>
-      <!-- Categories Section -->
+      -->
+      <!-- Hito 3: category selection. Kept for a later milestone.
+      
       <section id="categories" class="categories card hide">
         <p class="message show" id="messageWelcome"></p>
         <button id="buttonAnimals" onclick="buttonAnimals()" class="button">
@@ -40,10 +55,11 @@
           Comenzar
         </button>
       </section>
+      -->
       <!-- Animals Category -->
       <section id="animals">
-        <!-- Animals Category - Fisrt Question -->
-        <section id="first" class="first card hide">
+        <!-- Animals Category - First Question -->
+        <section id="first" class="first card">
           <h2>
             1. Vuelo de noche, duermo de día y nunca verás plumas, en el ala
             mía. ¿Quién soy?
@@ -64,27 +80,15 @@
           <label for="answer1.2" class="answer">Murciélago</label> <br />
           <input type="radio" id="answer1.3" name="question1" value="gato" />
           <label for="answer1.3" class="answer">Gato</label> <br />
-          <p id="unchecked1" class="message hide"></p>
           <section class="buttonSection">
-            <button
-              onclick="buttonQuestion('question1', 1, 'rightAnswer1', 'Murciélago', 'buttonQuestion1', 'buttonNext1', 'unchecked1')"
-              class="button"
-              id="buttonQuestion1"
-            >
+            <button type="button" class="button" id="buttonQuestion1">
               Enviar
             </button>
-            <p class="message" id="rightAnswer1"></p>
-            <button
-              id="buttonNext1"
-              onclick="buttonNext('first', 'second', 'second card show')"
-              class="button hide"
-            >
-              Siguiente
-            </button>
+            <p id="rightAnswer1" aria-live="polite" hidden></p>
           </section>
         </section>
         <!-- Animals Category - Second Question -->
-        <section id="second" class="second card hide">
+        <section id="second" class="second card">
           <h2>
             2. Canto en la orilla, vivo en el agua, no soy pescado ni soy
             cigarra. ¿Quién soy?
@@ -96,27 +100,15 @@
           <label for="answer2.2">Gallina</label> <br />
           <input type="radio" id="answer2.3" name="question2" value="rana" />
           <label for="answer2.3">Rana</label> <br />
-          <p id="unchecked2" class="message hide"></p>
           <section class="buttonSection">
-            <button
-              onclick="buttonQuestion('question2', 2, 'rightAnswer2', 'Rana', 'buttonQuestion2', 'buttonNext2', 'unchecked2')"
-              class="button"
-              id="buttonQuestion2"
-            >
+            <button type="button" class="button" id="buttonQuestion2">
               Enviar
             </button>
-            <p class="message" id="rightAnswer2"></p>
-            <br />
-            <button
-              id="buttonNext2"
-              onclick="buttonNext('second', 'third', 'third card show')"
-              class="button hide"
-            >
-              Siguiente
-            </button>
+            <p id="rightAnswer2" aria-live="polite" hidden></p>
           </section>
         </section>
-        <!-- Animals Category - Third Question -->
+      <!-- Hito 1 ends after the second question. Later animal question and score screen:
+        
         <section id="third" class="third card hide">
           <h2>
             3. Tengo grandes orejas y trompa, me gusta comer hojas y bañar mi
@@ -158,7 +150,7 @@
             </button>
           </section>
         </section>
-        <!-- Animals Category - Score Section -->
+        
         <section id="endAnimals" class="end animals card hide">
           <p class="message" id="finalScoreAnimals"></p>
           <button
@@ -169,10 +161,12 @@
             Reiniciar
           </button>
         </section>
+      -->
       </section>
-      <!-- Plants Category -->
+      <!-- Hito 3: plant questions, kept for a later milestone.
+      
       <section id="plants">
-        <!-- Plants Category - First Question -->
+        
         <section id="firstPlant" class="first plant card hide">
           <img
             src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/5.svg?v=1699461598226"
@@ -228,7 +222,7 @@
             </button>
           </section>
         </section>
-        <!-- Plants Category - Second Question -->
+        
         <section id="secondPlant" class="second plant card hide">
           <img
             src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/7.svg?v=1699461609765"
@@ -284,7 +278,7 @@
             </button>
           </section>
         </section>
-        <!-- Plants Category - Third Question -->
+        
         <section id="thirdPlant" class="third plant card hide">
           <img
             src="https://cdn.glitch.global/4c13f9c2-a1a7-4b26-ab8c-3b85350ce417/9.svg?v=1699461625433"
@@ -339,7 +333,7 @@
             </button>
           </section>
         </section>
-        <!-- Plants Category - Score Section -->
+        
         <section id="endPlants" class="end plants card hide">
           <p class="message" id="finalScorePlants"></p>
           <button
@@ -351,7 +345,7 @@
           </button>
         </section>
       </section>
-      <!-- Final -->
+      -->
     </main>
     <script src="script.js" defer></script>
   </body>
