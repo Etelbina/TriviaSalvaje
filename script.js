@@ -241,19 +241,93 @@
 //   return false;
 // }
 
-// Hito 1: show the correct answer when its button is clicked.
-const answerMessage1 = document.getElementById("rightAnswer1");
-document
-  .getElementById("buttonQuestion1")
-  .addEventListener("click", function () {
-    answerMessage1.textContent = "La respuesta correcta es: Murciélago";
-    answerMessage1.hidden = false;
+// Hito 2: welcome, animal questions, and replay.
+const welcomeForm = document.getElementById("welcomeForm");
+const nameInput = document.getElementById("name");
+const welcomeScreen = document.getElementById("welcome");
+const greetingScreen = document.getElementById("greeting");
+const greetingMessage = document.getElementById("greetingMessage");
+const animalsScreen = document.getElementById("animals");
+const finishScreen = document.getElementById("finish");
+
+welcomeForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  greetingMessage.textContent = "¡Hola, " + nameInput.value.trim() + "!";
+  welcomeScreen.hidden = true;
+  greetingScreen.hidden = false;
+});
+
+document.getElementById("buttonStart").addEventListener("click", function () {
+  greetingScreen.hidden = true;
+  animalsScreen.hidden = false;
+});
+
+function setupQuestion(formId, correctValue, correctAnswer, nextScreenId) {
+  const form = document.getElementById(formId);
+  const button = form.querySelector('button[type="submit"]');
+  const feedback = form.querySelector(".message");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (form.dataset.answered === "true") {
+      form.closest("section").hidden = true;
+      document.getElementById(nextScreenId).hidden = false;
+      return;
+    }
+
+    const selectedAnswer = form.querySelector('input[type="radio"]:checked');
+    const correctInput = form.querySelector(
+      'input[value="' + correctValue + '"]'
+    );
+    const correctLabel = form.querySelector(
+      'label[for="' + correctInput.id + '"]'
+    );
+    const selectedLabel = form.querySelector(
+      'label[for="' + selectedAnswer.id + '"]'
+    );
+    const isCorrect = selectedAnswer.value === correctValue;
+
+    const boldAnswer = document.createElement("strong");
+    boldAnswer.textContent = correctLabel.textContent;
+    correctLabel.replaceChildren(boldAnswer);
+
+    if (!isCorrect) {
+      const crossedAnswer = document.createElement("del");
+      crossedAnswer.textContent = selectedLabel.textContent;
+      selectedLabel.replaceChildren(crossedAnswer);
+    }
+
+    const result = isCorrect ? "Correcto. " : "Incorrecto. ";
+    feedback.textContent = result + "La respuesta correcta es: " + correctAnswer;
+    feedback.hidden = false;
+    button.textContent = "Siguiente";
+    form.dataset.answered = "true";
+  });
+}
+
+setupQuestion("questionForm1", "murcielago", "Murciélago", "second");
+setupQuestion("questionForm2", "rana", "Rana", "third");
+setupQuestion("questionForm3", "elefante", "Elefante", "finish");
+
+document.getElementById("buttonRestart").addEventListener("click", function () {
+  ["questionForm1", "questionForm2", "questionForm3"].forEach(function (id) {
+    const form = document.getElementById(id);
+    form.reset();
+    form.dataset.answered = "false";
+    form.querySelector('button[type="submit"]').textContent = "Enviar";
+    form.querySelectorAll("label").forEach(function (label) {
+      label.textContent = label.textContent;
+    });
+    const feedback = form.querySelector(".message");
+    feedback.textContent = "";
+    feedback.hidden = true;
   });
 
-const answerMessage2 = document.getElementById("rightAnswer2");
-document
-  .getElementById("buttonQuestion2")
-  .addEventListener("click", function () {
-    answerMessage2.textContent = "La respuesta correcta es: Rana";
-    answerMessage2.hidden = false;
-  });
+  finishScreen.hidden = true;
+  animalsScreen.hidden = true;
+  greetingScreen.hidden = true;
+  welcomeScreen.hidden = false;
+  nameInput.value = "";
+  nameInput.focus();
+});
