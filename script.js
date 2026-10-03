@@ -241,14 +241,18 @@
 //   return false;
 // }
 
-// Hito 2: welcome, animal questions, and replay.
+// Hito 3: categories, plant questions, images, and results.
 const welcomeForm = document.getElementById("welcomeForm");
 const nameInput = document.getElementById("name");
 const welcomeScreen = document.getElementById("welcome");
 const greetingScreen = document.getElementById("greeting");
 const greetingMessage = document.getElementById("greetingMessage");
 const animalsScreen = document.getElementById("animals");
+const plantsScreen = document.getElementById("plants");
 const finishScreen = document.getElementById("finish");
+
+let correctAnswers = 0;
+let incorrectAnswers = 0;
 
 welcomeForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -257,15 +261,32 @@ welcomeForm.addEventListener("submit", function (event) {
   greetingScreen.hidden = false;
 });
 
-document.getElementById("buttonStart").addEventListener("click", function () {
+document.getElementById("buttonAnimals").addEventListener("click", function () {
   greetingScreen.hidden = true;
   animalsScreen.hidden = false;
 });
 
-function setupQuestion(formId, correctValue, correctAnswer, nextScreenId) {
+document.getElementById("buttonPlants").addEventListener("click", function () {
+  greetingScreen.hidden = true;
+  plantsScreen.hidden = false;
+});
+
+function setupQuestion(
+  formId,
+  correctValue,
+  correctAnswer,
+  nextScreenId,
+  revealedImageId,
+  silhouetteId,
+  isLastQuestion
+) {
   const form = document.getElementById(formId);
   const button = form.querySelector('button[type="submit"]');
   const feedback = form.querySelector(".message");
+  const revealedImage = document.getElementById(revealedImageId);
+  const silhouette = silhouetteId
+    ? document.getElementById(silhouetteId)
+    : null;
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -273,6 +294,10 @@ function setupQuestion(formId, correctValue, correctAnswer, nextScreenId) {
     if (form.dataset.answered === "true") {
       form.closest("section").hidden = true;
       document.getElementById(nextScreenId).hidden = false;
+
+      if (isLastQuestion) {
+        showResults();
+      }
       return;
     }
 
@@ -296,22 +321,104 @@ function setupQuestion(formId, correctValue, correctAnswer, nextScreenId) {
       const crossedAnswer = document.createElement("del");
       crossedAnswer.textContent = selectedLabel.textContent;
       selectedLabel.replaceChildren(crossedAnswer);
+      incorrectAnswers++;
+    } else {
+      correctAnswers++;
     }
 
     const result = isCorrect ? "Correcto. " : "Incorrecto. ";
     feedback.textContent = result + "La respuesta correcta es: " + correctAnswer;
     feedback.hidden = false;
-    button.textContent = "Siguiente";
+    revealedImage.hidden = false;
+
+    if (silhouette) {
+      silhouette.hidden = true;
+    }
+
+    button.textContent = isLastQuestion ? "Ver puntaje" : "Siguiente";
     form.dataset.answered = "true";
   });
 }
 
-setupQuestion("questionForm1", "murcielago", "Murciélago", "second");
-setupQuestion("questionForm2", "rana", "Rana", "third");
-setupQuestion("questionForm3", "elefante", "Elefante", "finish");
+setupQuestion(
+  "questionForm1",
+  "murcielago",
+  "Murciélago",
+  "second",
+  "animalImage1",
+  null,
+  false
+);
+setupQuestion(
+  "questionForm2",
+  "rana",
+  "Rana",
+  "third",
+  "animalImage2",
+  null,
+  false
+);
+setupQuestion(
+  "questionForm3",
+  "elefante",
+  "Elefante",
+  "finish",
+  "animalImage3",
+  null,
+  true
+);
+setupQuestion(
+  "plantQuestionForm1",
+  "tulipan",
+  "Tulipán",
+  "secondPlant",
+  "plantImage1",
+  "plantSilhouette1",
+  false
+);
+setupQuestion(
+  "plantQuestionForm2",
+  "cactus",
+  "Cactus",
+  "thirdPlant",
+  "plantImage2",
+  "plantSilhouette2",
+  false
+);
+setupQuestion(
+  "plantQuestionForm3",
+  "lavanda",
+  "Lavanda",
+  "finish",
+  "plantImage3",
+  "plantSilhouette3",
+  true
+);
+
+function showResults() {
+  animalsScreen.hidden = true;
+  plantsScreen.hidden = true;
+  document.getElementById("correctCount").textContent = correctAnswers;
+  document.getElementById("incorrectCount").textContent = incorrectAnswers;
+  document.getElementById("correctLabel").textContent =
+    correctAnswers === 1 ? "Correcta" : "Correctas";
+  document.getElementById("incorrectLabel").textContent =
+    incorrectAnswers === 1 ? "Incorrecta" : "Incorrectas";
+  document.getElementById("playerName").textContent =
+    "¡" + nameInput.value.trim().toUpperCase() + "!";
+  document.getElementById("totalScore").textContent =
+    correctAnswers - incorrectAnswers;
+}
 
 document.getElementById("buttonRestart").addEventListener("click", function () {
-  ["questionForm1", "questionForm2", "questionForm3"].forEach(function (id) {
+  [
+    "questionForm1",
+    "questionForm2",
+    "questionForm3",
+    "plantQuestionForm1",
+    "plantQuestionForm2",
+    "plantQuestionForm3",
+  ].forEach(function (id) {
     const form = document.getElementById(id);
     form.reset();
     form.dataset.answered = "false";
@@ -324,8 +431,34 @@ document.getElementById("buttonRestart").addEventListener("click", function () {
     feedback.hidden = true;
   });
 
+  [
+    "animalImage1",
+    "animalImage2",
+    "animalImage3",
+    "plantImage1",
+    "plantImage2",
+    "plantImage3",
+  ].forEach(function (id) {
+    document.getElementById(id).hidden = true;
+  });
+  ["plantSilhouette1", "plantSilhouette2", "plantSilhouette3"].forEach(
+    function (id) {
+      document.getElementById(id).hidden = false;
+    }
+  );
+
+  ["first", "firstPlant"].forEach(function (id) {
+    document.getElementById(id).hidden = false;
+  });
+  ["second", "third", "secondPlant", "thirdPlant"].forEach(function (id) {
+    document.getElementById(id).hidden = true;
+  });
+
+  correctAnswers = 0;
+  incorrectAnswers = 0;
   finishScreen.hidden = true;
   animalsScreen.hidden = true;
+  plantsScreen.hidden = true;
   greetingScreen.hidden = true;
   welcomeScreen.hidden = false;
   nameInput.value = "";

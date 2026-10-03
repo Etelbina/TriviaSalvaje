@@ -13,7 +13,7 @@
   <body>
     <header>
       <img
-        src="https://cdn.glitch.global/dd7f20cf-a82f-456c-be93-e62e7360f6d5/font-weight%20600%3B.svg?v=1699373205294"
+        src="images/logo.png"
         alt="Trivia Salvaje"
         class="logo"
       />
@@ -29,7 +29,13 @@
 
       <section id="greeting" class="card" hidden>
         <p id="greetingMessage" class="message" aria-live="polite"></p>
-        <button id="buttonStart" type="button" class="button">Comenzar</button>
+        <p>Elige una categoría:</p>
+        <button id="buttonAnimals" type="button" class="button">
+          Animales
+        </button>
+        <button id="buttonPlants" type="button" class="button">
+          Plantas
+        </button>
       </section>
 
       <section id="animals" hidden>
@@ -38,6 +44,13 @@
             1. Vuelo de noche, duermo de día y nunca verás plumas, en el ala
             mía. ¿Quién soy?
           </h2>
+          <img
+            src="images/murcielago.png"
+            alt="Murciélago"
+            id="animalImage1"
+            class="revealedImage"
+            hidden
+          />
           <form id="questionForm1" class="questionForm">
             <input
               type="radio"
@@ -61,10 +74,10 @@
               value="gato"
             />
             <label for="answer1.3" class="answer">Gato</label> <br />
+            <p class="message" id="rightAnswer1" aria-live="polite" hidden></p>
             <button type="submit" class="button" id="buttonQuestion1">
               Enviar
             </button>
-            <p class="message" id="rightAnswer1" aria-live="polite" hidden></p>
           </form>
         </section>
 
@@ -73,6 +86,13 @@
             2. Canto en la orilla, vivo en el agua, no soy pescado ni soy
             cigarra. ¿Quién soy?
           </h2>
+          <img
+            src="images/rana.png"
+            alt="Rana"
+            id="animalImage2"
+            class="revealedImage"
+            hidden
+          />
           <form id="questionForm2" class="questionForm">
             <input
               type="radio"
@@ -96,10 +116,10 @@
               value="rana"
             />
             <label for="answer2.3" class="answer">Rana</label> <br />
+            <p class="message" id="rightAnswer2" aria-live="polite" hidden></p>
             <button type="submit" class="button" id="buttonQuestion2">
               Enviar
             </button>
-            <p class="message" id="rightAnswer2" aria-live="polite" hidden></p>
           </form>
         </section>
 
@@ -108,6 +128,13 @@
             3. Tengo grandes orejas y trompa, me gusta comer hojas y bañar mi
             dura piel. ¿Quién soy?
           </h2>
+          <img
+            src="images/elefante.png"
+            alt="Elefante"
+            id="animalImage3"
+            class="revealedImage"
+            hidden
+          />
           <form id="questionForm3" class="questionForm">
             <input
               type="radio"
@@ -131,16 +158,186 @@
               value="jirafa"
             />
             <label for="answer3.3" class="answer">Jirafa</label> <br />
+            <p class="message" id="rightAnswer3" aria-live="polite" hidden></p>
             <button type="submit" class="button" id="buttonQuestion3">
               Enviar
             </button>
-            <p class="message" id="rightAnswer3" aria-live="polite" hidden></p>
+          </form>
+        </section>
+      </section>
+
+      <section id="plants" hidden>
+        <section id="firstPlant" class="first plant card">
+          <h2>1. ¿Qué planta es?</h2>
+          <img
+            src="images/tulipan_silueta.png"
+            alt="Silueta de un tulipán"
+            id="plantSilhouette1"
+            class="silhouette"
+          />
+          <img
+            src="images/tulipan.png"
+            alt="Tulipán"
+            id="plantImage1"
+            class="revealedImage"
+            hidden
+          />
+          <form id="plantQuestionForm1" class="questionForm">
+            <input
+              type="radio"
+              id="plantAnswer1.1"
+              name="plantQuestion1"
+              value="tulipan"
+              required
+            />
+            <label for="plantAnswer1.1" class="answer">Tulipán</label>
+            <br />
+            <input
+              type="radio"
+              id="plantAnswer1.2"
+              name="plantQuestion1"
+              value="gardenia"
+            />
+            <label for="plantAnswer1.2" class="answer">Gardenia</label>
+            <br />
+            <input
+              type="radio"
+              id="plantAnswer1.3"
+              name="plantQuestion1"
+              value="rosa"
+            />
+            <label for="plantAnswer1.3" class="answer">Rosa</label>
+            <br />
+            <p
+              class="message"
+              id="rightPlantAnswer1"
+              aria-live="polite"
+              hidden
+            ></p>
+            <button type="submit" class="button" id="buttonPlantQuestion1">
+              Enviar
+            </button>
+          </form>
+        </section>
+
+        <section id="secondPlant" class="second plant card" hidden>
+          <h2>2. ¿Qué planta es?</h2>
+          <img
+            src="images/cactus_silueta.png"
+            alt="Silueta de un cactus"
+            id="plantSilhouette2"
+            class="silhouette"
+          />
+          <img
+            src="images/cactus.png"
+            alt="Cactus"
+            id="plantImage2"
+            class="revealedImage"
+            hidden
+          />
+          <form id="plantQuestionForm2" class="questionForm">
+            <input
+              type="radio"
+              id="plantAnswer2.1"
+              name="plantQuestion2"
+              value="suculenta"
+              required
+            />
+            <label for="plantAnswer2.1" class="answer">Suculenta</label>
+            <br />
+            <input
+              type="radio"
+              id="plantAnswer2.2"
+              name="plantQuestion2"
+              value="agave"
+            />
+            <label for="plantAnswer2.2" class="answer">Agave</label>
+            <br />
+            <input
+              type="radio"
+              id="plantAnswer2.3"
+              name="plantQuestion2"
+              value="cactus"
+            />
+            <label for="plantAnswer2.3" class="answer">Cactus</label>
+            <br />
+            <p
+              class="message"
+              id="rightPlantAnswer2"
+              aria-live="polite"
+              hidden
+            ></p>
+            <button type="submit" class="button" id="buttonPlantQuestion2">
+              Enviar
+            </button>
+          </form>
+        </section>
+
+        <section id="thirdPlant" class="third plant card" hidden>
+          <h2>3. ¿Qué planta es?</h2>
+          <img
+            src="images/lavanda_silueta.png"
+            alt="Silueta de una planta de lavanda"
+            id="plantSilhouette3"
+            class="silhouette"
+          />
+          <img
+            src="images/lavanda.png"
+            alt="Lavanda"
+            id="plantImage3"
+            class="revealedImage"
+            hidden
+          />
+          <form id="plantQuestionForm3" class="questionForm">
+            <input
+              type="radio"
+              id="plantAnswer3.1"
+              name="plantQuestion3"
+              value="menta"
+              required
+            />
+            <label for="plantAnswer3.1" class="answer">Menta</label>
+            <br />
+            <input
+              type="radio"
+              id="plantAnswer3.2"
+              name="plantQuestion3"
+              value="lavanda"
+            />
+            <label for="plantAnswer3.2" class="answer">Lavanda</label>
+            <br />
+            <input
+              type="radio"
+              id="plantAnswer3.3"
+              name="plantQuestion3"
+              value="manzanilla"
+            />
+            <label for="plantAnswer3.3" class="answer">Manzanilla</label>
+            <br />
+            <p
+              class="message"
+              id="rightPlantAnswer3"
+              aria-live="polite"
+              hidden
+            ></p>
+            <button type="submit" class="button" id="buttonPlantQuestion3">
+              Enviar
+            </button>
           </form>
         </section>
       </section>
 
       <section id="finish" class="card" hidden>
-        <p>Terminaste la trivia.</p>
+        <p>
+          + <span id="correctCount">0</span>
+          <span id="correctLabel">Correctas</span>
+        </p>
+        <p>
+          - <span id="incorrectCount">0</span>
+          <span id="incorrectLabel">Incorrectas</span>
+        </p>
+        <p id="playerName"></p>
+        <p>Tu puntaje total es <span id="totalScore">0</span></p>
         <button id="buttonRestart" type="button" class="button">Volver a jugar</button>
       </section>
     </main>
