@@ -35,7 +35,8 @@ Follow the original Laboratoria project brief one hito at a time, while preservi
 
 1. **Hito 1 — complete:** one view with the first two animal questions, three answer choices each, and an Enviar button that reveals only the correct answer. No right/wrong feedback and no active CSS.
 2. **Hito 2 — complete:** add the welcome/name flow, greeting, third animal question, right/wrong feedback, correct/incorrect answer formatting, next-question flow, and replay. Keep CSS inactive.
-3. **Hito 3 — HTML and JavaScript in progress:** add category selection, plant questions and images, answer feedback, correct/incorrect counts, total score, and replay. Hito 3.1 is the CSS work, to be guided and reviewed by Etelbina.
+3. **Hito 3 — complete:** add category selection, plant questions and images, answer feedback, correct/incorrect counts, total score, and replay.
+   **Hito 3.1 — complete:** style the active app screens and elements while keeping rules for later milestones commented. The CSS work was guided by Etelbina using the prototype and screen shots.
 4. **Hito 4:** add any remaining original features, such as the timer, only if they fit the agreed scope.
 
 Revisit the exact acceptance criteria with Etelbina before starting each hito; do not assume every original brief feature must be added.
@@ -49,7 +50,9 @@ Revisit the exact acceptance criteria with Etelbina before starting each hito; d
 - The prototype and supplied art are in `images/`, including `images/prototype.png`.
 - Hito 1 is complete and committed/pushed.
 - Hito 2 was committed and pushed to `ia-in-the-loop-version` as `4f91cea` (`Complete Hito 2 welcome and animal quiz flow`).
-- Hito 3 HTML and JavaScript are implemented locally and remain uncommitted. Both categories have three questions; plant questions show silhouettes before answering and reveal the full image after answering. The last question button changes to Ver puntaje, then opens the shared results screen. Results count correct and incorrect answers and calculate total as correct minus incorrect. CSS remains inactive. Hito 3.1 CSS is next, with Etelbina guiding the visual work based on the prototype and original design.
+- Hito 3 HTML and JavaScript are implemented. Both categories have three questions; plant questions show silhouettes before answering and reveal the full image after answering. The last question button changes to Ver puntaje, then opens the shared results screen. Results count correct and incorrect answers and calculate total as correct minus incorrect.
+- Hito 3.1 CSS is complete and linked from `index.html`. CSS rules for elements reserved for later milestones remain commented. The reference screen shots are in `images/Trivia screen shots.png`.
+- Hito 3.1 was committed as `5ce7df4` (`Complete Hito 3.1 CSS styling`); the push is pending.
 
 ## Continuity
 

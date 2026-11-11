@@ -1,12 +1,58 @@
 /* 1. Variables _________________________________________ */
-/*
-:root {}
-*/
+:root {
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* App colors */
+  --color-red: #e40025;
+  --color-orange: #f38c01;
+  --color-yellow: #f5db24;
+  --color-blue: #2ea8fb;
+  --color-purple: #853eb8;
+  --color-pink: #ef3cbd;
+  --color-green: #9cd910;
+
+  /* Typography */
+  --font-family-main: "Rubik", sans-serif;
+  --font-size-medium: 20px;
+  --font-size-small: 15px;
+  --font-size-large: 30px;
+  --font-size-button-hover: 18px;
+  --font-size-next-button-hover: 25px;
+  --font-weight-bold: bold;
+  --font-weight-semibold: 600;
+  --text-shadow-glow: 1px 1px 30px;
+  --text-shadow-error: 3px 3px 10px;
+  --text-transform-button: uppercase;
+}
 
 /* 2. Reset _____________________________________________ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+p {
+  margin: 0;
+}
 
 /* 3. Global ____________________________________________ */
-/*
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  font-family: var(--font-family-main);
+}
+
+/* ...
 html,
 body {
   width: 100%;
@@ -16,67 +62,137 @@ body {
 */
 
 /* 4. Typography ________________________________________ */
-/*
-main {
-  font-family: "Rubik", sans-serif;
+
+section.welcome {
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
+}
+
+#welcomeForm .lablebox {
+  font-size: var(--font-size-large);
 }
 
 h2 {
-  color: #ffffff;
+  color: var(--color-white);
+  font-size: var(--font-size-medium);
 }
 
-#timer {
-  color: #e40025;
-  font-size: 20px;
-  font-weight: bold;
-  text-shadow: 1px 1px 30px #e40025;
+.box {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
   text-align: center;
-  font-family: "Rubik", sans-serif;
-  margin: 3px;
+  color: var(--color-orange);
+  text-transform: var(--text-transform-button);
+}
+
+.button {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-small);
+  text-transform: var(--text-transform-button);
+}
+
+#greeting {
+  text-align: center;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+}
+
+#greetingMessage {
+  margin-bottom: 20px;
+}
+
+
+#animals h2 {
+  font-size: var(--font-size-small);
 }
 
 p.message {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+/*
+.questionForm p.message {
+  font-size: var(--font-size-small);
+  margin-top: 5px;
 }
 
 p.error {
-  font-size: 15px;
-  color: #e40025;
-  text-shadow: 3px 3px 10px #e40025;
+  font-size: var(--font-size-small);
+  color: var(--color-red);
+  text-shadow: var(--text-shadow-error) var(--color-red);
 }
-
+*/
 section.first p.message {
-  color: #2ea8fb;
-  text-shadow: 1px 1px 30px #2ea8fb;
+  color: var(--color-blue);
+  text-shadow: var(--text-shadow-glow) var(--color-blue);
 }
 
 section.second p.message {
-  color: #853eb8;
-  text-shadow: 5px 5px 10px #853eb8;
+  color: var(--color-purple);
+  text-shadow: 5px 5px 10px var(--color-purple);
 }
 
 section.third p.message {
-  color: #dc02cd;
-  text-shadow: 1px 1px 30px #dc02cd;
+  color: var(--color-pink);
+  text-shadow: var(--text-shadow-glow) var(--color-pink);
 }
 
-section.end p.message {
-  color: #9cd910;
-  font-size: 40px;
-  font-weight: bold;
-  text-shadow: 1px 1px 30px #9cd910;
+#finish p {
+  color: var(--color-green);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  text-shadow: var(--text-shadow-glow) var(--color-green);
+}
+
+#finish {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+/*
+#buttonNext3,
+#buttonNextPlant3 {
+  font-size: var(--font-size-medium);
+}
+
+#timer {
+  color: var(--color-red);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  text-shadow: var(--text-shadow-glow) var(--color-red);
+  text-align: center;
+  margin: 3px;
 }
 */
 
 /* 5. Layout _____________________________________________ */
-/*
+
 header {
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+header img.logo {
+  width: 250px;
+  height: 110px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto 30px auto;
+}
+
+#greeting {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -84,24 +200,25 @@ img {
   margin-left: 15%;
 }
 
-.logo {
+#animals img.revealedImage {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
   margin: 0 auto;
 }
 
+#animals img.revealedImage[hidden] {
+  visibility: hidden;
+}
+/*
 section.card {
   border-radius: 10px;
   padding: 40px;
   margin: 20px 30px;
-  width: 220px;
+  width: 240px;
   height: 500px;
   margin: 25px auto;
-}
-
-.categories {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .lablebox {
@@ -119,25 +236,19 @@ section.card {
 /* 6. Components ________________________________________ */
 /*
 section.welcome {
-  border: 2px #f38c01 solid;
-  box-shadow: 0 0 15px 5px #f38c01;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
+  border: 2px var(--color-orange) solid;
+  box-shadow: 0 0 15px 5px var(--color-orange);
 }
 
-.categories {
-  border: 2px #f5db24 solid;
-  box-shadow: 0 0 15px 5px #f5db24;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
+#greeting {
+  border: 2px var(--color-yellow) solid;
+  box-shadow: 0 0 15px 5px var(--color-yellow);
 }
 
 input[type="radio"] {
   appearance: none;
   background-color: #ffffff;
-  margin: 20px 10px 0 0;
+  margin: 10px 10px 0 0;
   width: 12px;
   height: 12px;
   border: 1px solid #ffffff;
@@ -145,107 +256,109 @@ input[type="radio"] {
 }
 
 section.first {
-  border: 2px #2ea8fb solid;
-  box-shadow: 0 0 15px 5px #2ea8fb;
+  border: 2px var(--color-blue) solid;
+  box-shadow: 0 0 15px 5px var(--color-blue);
 }
 
 section.second {
-  border: 2px #853eb8 solid;
-  box-shadow: 0 0 15px 5px #853eb8;
+  border: 2px var(--color-purple) solid;
+  box-shadow: 0 0 15px 5px var(--color-purple);
 }
 
 section.third {
-  border: 2px #dc02cd solid;
-  box-shadow: 0 0 15px 5px #dc02cd;
+  border: 2px var(--color-pink) solid;
+  box-shadow: 0 0 15px 5px var(--color-pink);
 }
 
-section.end {
-  text-align: center;
-  border: 2px #9cd910 solid;
-  box-shadow: 0 0 15px 5px #9cd910;
+#finish {
+  border: 2px var(--color-green) solid;
+  box-shadow: 0 0 15px 5px var(--color-green);
 }
 
 .box {
-  margin-top: 72px;
-  width: 220px;
+  width: 180px;
   height: 35px;
   border-radius: 5px;
-  font-family: "Rubik", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  color: #f38c01;
-  text-transform: uppercase;
 }
 
+#welcomeForm .box {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 72px;
+}*/
+
 .button {
-  font-family: "Rubik", sans-serif;
   margin-top: 30px;
-  font-weight: bold;
-  font-size: 15px;
   border-style: none;
   border-radius: 5px;
   height: 32px;
-  width: 105px;
+  width: 150px;
   border: 1px #ffffff solid;
-  text-transform: uppercase;
+}
+
+.questionForm .button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section.welcome button {
-  color: #ffffff;
-  background-color: #f38c01;
-  box-shadow: 0 0 7px 3px #f38c01;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  box-shadow: 0 0 7px 3px var(--color-orange);
 }
 
-section.categories button {
-  color: #000000;
-  background-color: #f5db24;
-  box-shadow: 0 0 7px 3px #f5db24;
+#greeting button {
+  color: var(--color-black);
+  background-color: var(--color-yellow);
+  box-shadow: 0 0 7px 3px var(--color-yellow);
 }
 
 section.first button {
-  color: #ffffff;
-  background-color: #2ea8fb;
-  box-shadow: 0 0 7px 3px #2ea8fb;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  box-shadow: 0 0 7px 3px var(--color-blue);
 }
 
 section.second button {
-  color: #ffffff;
-  background-color: #853eb8;
-  box-shadow: 0 0 7px 3px #853eb8;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  box-shadow: 0 0 7px 3px var(--color-purple);
 }
 
 section.third button {
-  color: #ffffff;
-  background-color: #dc02cd;
-  box-shadow: 0 0 7px 3px #dc02cd;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  box-shadow: 0 0 7px 3px var(--color-pink);
 }
 
-section.end button {
-  color: #ffffff;
-  background-color: #9cd910;
-  box-shadow: 0 0 7px 3px #9cd910;
+#finish button {
+  color: var(--color-white);
+  background-color: var(--color-green);
+  box-shadow: 0 0 7px 3px var(--color-green);
+  margin-top: 12px;
 }
 
+/*
 #buttonNext3,
 #buttonNextPlant3 {
-  font-size: 20px;
   height: 40px;
   width: 180px;
 }
 */
 
 /* 7. States _____________________________________________ */
-/*
-.button:hover {
-  font-size: 18px;
+/*.button:hover {
+  font-size: var(--font-size-button-hover);
   height: 38px;
   width: 120px;
 }
 
 label.answer:hover {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
 }
 
@@ -256,75 +369,74 @@ input[type="radio"]:hover {
 }
 
 input[type="radio"]:checked {
-  box-shadow: 3px 3px 10px #2ea8fb;
-  font-size: 20px;
-  font-weight: 600;
+  box-shadow: 3px 3px 10px var(--color-blue);
   padding: 8px;
 }
 
 input[type="radio"]:checked + label {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
 }
 
 section.first label.answer:hover {
-  text-shadow: 3px 3px 10px #2ea8fb;
+  text-shadow: 3px 3px 10px var(--color-blue);
 }
 
 section.first input[type="radio"]:hover {
-  box-shadow: 3px 3px 10px #2ea8fb;
+  box-shadow: 3px 3px 10px var(--color-blue);
 }
 
 section.first input[type="radio"]:checked {
-  background-color: #2ea8fb;
-  text-shadow: 3px 3px 10px #2ea8fb;
+  background-color: var(--color-blue);
+  text-shadow: 3px 3px 10px var(--color-blue);
 }
 
 section.first input[type="radio"]:checked + label {
-  color: #2ea8fb;
-  text-shadow: 3px 3px 10px #2ea8fb;
+  color: var(--color-blue);
+  text-shadow: 3px 3px 10px var(--color-blue);
 }
 
 section.second label.answer:hover {
-  text-shadow: 3px 3px 10px #853eb8;
+  text-shadow: 3px 3px 10px var(--color-purple);
 }
 
 section.second input[type="radio"]:hover {
-  box-shadow: 3px 3px 10px #853eb8;
+  box-shadow: 3px 3px 10px var(--color-purple);
 }
 
 section.second input[type="radio"]:checked {
-  background-color: #853eb8;
-  text-shadow: 3px 3px 10px #853eb8;
+  background-color: var(--color-purple);
+  text-shadow: 3px 3px 10px var(--color-purple);
 }
 
 section.second input[type="radio"]:checked + label {
-  color: #853eb8;
-  text-shadow: 3px 3px 10px #853eb8;
+  color: var(--color-purple);
+  text-shadow: 3px 3px 10px var(--color-purple);
 }
 
 section.third label.answer:hover {
-  text-shadow: 3px 3px 10px #dc02cd;
+  text-shadow: 3px 3px 10px var(--color-pink);
 }
 
 section.third input[type="radio"]:hover {
-  box-shadow: 3px 3px 10px #dc02cd;
+  box-shadow: 3px 3px 10px var(--color-pink);
 }
 
 section.third input[type="radio"]:checked {
-  background-color: #dc02cd;
-  text-shadow: 3px 3px 10px #dc02cd;
+  background-color: var(--color-pink);
+  text-shadow: 3px 3px 10px var(--color-pink);
 }
 
 section.third input[type="radio"]:checked + label {
-  color: #dc02cd;
-  text-shadow: 3px 3px 10px #dc02cd;
+  color: var(--color-pink);
+  text-shadow: 3px 3px 10px var(--color-pink);
 }
+*/
 
+/* These IDs are not used by the current HTML.
 #buttonNext3:hover,
 #buttonNextPlant3:hover {
-  font-size: 25px;
   height: 48px;
   width: 220px;
 }
