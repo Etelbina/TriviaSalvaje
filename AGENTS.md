@@ -52,7 +52,7 @@ Revisit the exact acceptance criteria with Etelbina before starting each hito; d
 - Hito 2 was committed and pushed to `ia-in-the-loop-version` as `4f91cea` (`Complete Hito 2 welcome and animal quiz flow`).
 - Hito 3 HTML and JavaScript are implemented. Both categories have three questions; plant questions show silhouettes before answering and reveal the full image after answering. The last question button changes to Ver puntaje, then opens the shared results screen. Results count correct and incorrect answers and calculate total as correct minus incorrect.
 - Hito 3.1 CSS is complete and linked from `index.html`. CSS rules for elements reserved for later milestones remain commented. The reference screen shots are in `images/Trivia screen shots.png`.
-- Hito 3.1 was committed as `5ce7df4` (`Complete Hito 3.1 CSS styling`); the push is pending.
+- Hito 3.1 was committed and pushed to `ia-in-the-loop-version` as `c2ca862` (`Complete Hito 3.1 CSS styling`).
 
 ## Continuity
 
